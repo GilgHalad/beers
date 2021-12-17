@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>List of beers</title>
+    </head>
+    <body>
+          
+            {% for listado in listados %}
+
+                <table id="presentation">
+                    <tr><td>Id : {{listado['id']}}</td></tr>
+                    <tr><td>Name : {{listado['name']}}</td></tr>
+                    <tr><td>Description : {{listado['description']}}</td></tr>
+                    <tr><td>Tagline : {{listado['tagline']}}</td></tr>
+                    <tr><td>First Brewed : {{listado['first_brewed']}}</td></tr>
+                    <tr><td><img src="{{listado['image_url']}}" style="max-width: 5%; height: auto;"/></td></tr>
+                </table> 
+              
+            {% endfor %}
+                
+    </body>
+</html>
